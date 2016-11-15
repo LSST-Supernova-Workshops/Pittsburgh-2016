@@ -3,7 +3,7 @@
 
 
 ## Installs for Cadence
-- The lsst sims stack: The most important one is the lSST sims stack. Installation instructions [here](https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF) (probably easier to useconda, ~ 20 mins)
+- The lsst sims stack: The most important one is the LSST sims stack. Installation instructions [here](https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF) (probably easier to use conda, ~ 20 mins)
 - sqlite3 
 - pandas
 - tables
@@ -21,7 +21,7 @@
 ## Installs for snmachine
 - Clone : https://github.com/DarkEnergyScienceCollaboration/snmachine
 
-The code is not public (yet), and only open inside DESC. Therefore, members of DESC are able to access the github repo, as long as you are added to the LSST DESC team. If you are not a member of DESC, but you do have observer status, please email Robert Schuhmann (robert.schuhmann.13@ucl.ac.uk), and he will add you to the repo temporarily, i.e for the duration of the workshop. In either case, please refrain from distributing the code outside of DESC.
+The code is not public (yet), and only open inside DESC. Therefore, members of DESC are able to access the github repo, as long as you are added to the LSST DESC team. If you are not a member of DESC, but you do have observer status, please email Robert Schuhmann (robert.schuhmann.13@ucl.ac.uk), and he will add you to the repo temporarily, i.e., for the duration of the workshop. In either case, please refrain from distributing the code outside of DESC.
 
 Should there be any problems with the installation, please do not hesitate to email Robert.
 
