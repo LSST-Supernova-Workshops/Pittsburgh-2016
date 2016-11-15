@@ -3,12 +3,13 @@ Preparing for SN science in the LSST era: A kick-off workshop
 
 
 ## Installs for Cadence
-- The lsst sims stack: The most important one is the lSST sims stack. Installation instructions (here)[https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF) (probably easier to useconda, ~ 20 mins)
+- The lsst sims stack: The most important one is the lSST sims stack. Installation instructions (here)[https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF] (probably easier to useconda, ~ 20 mins)
 - sqlite3 
 - pandas
 - tables
 - OpSimSummary : https://github.com/rbiswas4/OpSimSummary
-- SNsims https://github.com/rbiswas4/SNsim://github.com/rbiswas4/SNsims 
+- SNsims       : https://github.com/rbiswas4/SNsim://github.com/rbiswas4/SNsims 
+
 ## Downloads
 - http://ops2.lsst.org/runs/reference_run/minion_1016/minion_1016_sqlite.db.gz 
 - 
