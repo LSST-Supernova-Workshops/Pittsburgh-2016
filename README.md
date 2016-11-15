@@ -14,7 +14,7 @@ We created this new organization (LSST-Supernova-Workshops) to provide
 - pandas
 - tables
 - OpSimSummary : https://github.com/rbiswas4/OpSimSummary
-- SNsims       : https://github.com/rbiswas4/SNsim://github.com/rbiswas4/SNsims 
+- SNsims       : https://github.com/rbiswas4/SNsims 
 
 ### Downloads
 - http://ops2.lsst.org/runs/reference_run/minion_1016/minion_1016_sqlite.db.gz 
