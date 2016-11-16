@@ -12,6 +12,8 @@
 
 5. Jeonghee Rho, Rolling cadence optimized for SN cosmology
 
+# Photometric Classification/Typing
+
 6. Chris D'Andrea, PSNID overview
 
 7. Karim Pichara, Towards realtime automatic classification of variable stars in LSST data
