@@ -12,12 +12,16 @@
 
 5. Jeonghee Rho, Rolling cadence optimized for SN cosmology
 
+# Photometric Classification/Typing
+
 6. Chris D'Andrea, PSNID overview
 
-7. Karim Pichara, Towards realtime automatic classification of variable stars in LSST data
+7. Mi Dai, Photometric classification and redshift estimation for LSST SNe
+
+8. Rob Firth, Spectrophotometric templates and algorithms for light curve simulations of stripped-envelope SNe
+
+9. Karim Pichara, Towards realtime automatic classification of variable stars in LSST data
  
-8. Emille Ishida, Domain adaptation and active learning in SN photometric classification
+10. Emille Ishida, Domain adaptation and active learning in SN photometric classification
 
-9. Rob Firth, Spectrophotometric templates and algorithms for light curve simulations of stripped-envelope SNe
-
-10. Mi Dai, Photometric classification and redshift estimation for LSST SNe
+11. Robert Schumann, SN classification with machine learning
