@@ -33,5 +33,4 @@ Should there be any problems with the installation, please do not hesitate to em
 
 
 ## Installs for sncosmo
-- sncosmo
-- clone : https://github.com/kbarbary/sncosmo-tutorials
+- Clone : https://github.com/kbarbary/sncosmo-tutorials
