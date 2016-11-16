@@ -1,4 +1,4 @@
-# Pittsburgh-2016
+# Pittsburgh-2016 
 This repository is for materials related to [Preparing for SN science in the LSST era: A kick-off workshop](https://sites.google.com/site/lsstdescsn/).
 
 We created this new organization (LSST-Supernova-Workshops) to provide
