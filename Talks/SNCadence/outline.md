@@ -18,7 +18,7 @@
 - sqlite database: ~ 4 Gigabytes
 - Multiple tables : Will list in a moment
 - Important tables : Summary (~900 MB) , Proposal (super tiny), 
-- Try examples to read OpSim outputs [in this notebook]('examples/Cadence_And_OpSim.ipynb')
+- Try examples to read OpSim outputs [in this notebook](examples/Cadence_And_OpSim.ipynb)
 - get schema (cmd line)
 
 # OpSim output Description
