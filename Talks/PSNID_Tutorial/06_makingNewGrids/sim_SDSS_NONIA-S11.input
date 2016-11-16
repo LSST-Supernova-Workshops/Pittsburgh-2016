@@ -1,0 +1,35 @@
+PREFIX_GRIDFILE: GRID_SDSS_SNCC-S11_TEST
+
+SIMLIB_FILE: SDSS_3year.SIMLIB  # need simlib to specify survey
+GENVERSION:  RKTESTSDSS_NONIA-S11
+GENMODEL:    NONIA
+
+
+GENSOURCE:       GRID
+NGRID_LOGZ:        10
+NGRID_COLORPAR:     2  # AV or SALT2 color
+NGRID_COLORLAW:     2  # RV or BETA
+NGRID_TREST:       56  # GENRANGE-Trest
+GRID_FORMAT:     FITS  # TEXT or FITS
+
+GENFILTERS:  ugriz
+INPUT_FILE_INCLUDE:  SIMGEN_INCLUDE_NONIA-S11.input
+
+KCOR_FILE:   SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits
+# selection criteria for generation
+
+GENRANGE_REDSHIFT:   0.01  0.7
+GENRANGE_TREST:    -20.0  90.0
+GENRANGE_AV:         0.0   1.0
+GENRANGE_RV:         2.2   3.2      # gen-range for RV
+
+CLEARPROMPT: 0
+GENMODEL_ERRSCALE: 1.0
+
+# cosmological params for lightcurve generation and redshift distribution
+OMEGA_MATTER:  0.27
+OMEGA_LAMBDA:  0.73
+W0_LAMBDA:    -1.00
+H0:           70.0   
+
+

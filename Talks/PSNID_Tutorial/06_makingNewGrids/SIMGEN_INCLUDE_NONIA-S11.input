@@ -1,0 +1,12 @@
+
+NON1A_KEYS: 5 
+         INDEX   WGT   MAGOFF  MAGSMEAR  SNTYPE
+NON1A:   301    1.0     0.00      0.0     22  # S11_SDSS-000018  IIP
+NON1A:   302    1.0     0.00      0.0     22  # S11_SDSS-001472  IIP
+NON1A:   303    1.0     0.00      0.0     32  # S11_SDSS-002000  Ib
+NON1A:   304    1.0     0.00      0.0     32  # S11_SDSS-002744  Ib
+NON1A:   305    1.0     0.00      0.0     22  # S11_SDSS-003818  IIP
+NON1A:   306    1.0     0.00      0.0     33  # S11_SDSS-013195  Ic
+NON1A:   307    1.0     0.00      0.0     32  # S11_SDSS-014492  Ib
+NON1A:   308    1.0     0.00      0.0     22  # S11_SDSS-014599  IIP
+

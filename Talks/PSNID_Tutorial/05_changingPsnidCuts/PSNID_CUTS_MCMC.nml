@@ -1,0 +1,46 @@
+
+ &SNLCINP
+     VERSION_PHOTOMETRY = 'SDSS_allCandidates+BOSS'
+     CUTWIN_CID         =  0, 0
+     SNCID_LIST         =  17087
+     PHOTFLAG_MSKREJ    =  1024
+     SNTABLE_LIST       = 'FITRES(text:key) SNANA(text:key) LCPLOT(text:key)'
+     TEXTFILE_PREFIX    = 'MyTest02'
+
+     MXLC_PLOT      =  99999
+     OPT_MWEBV      =  2
+     CUTWIN_NEPOCH  =  5, 999
+     OPT_SETPKMJD   = -1  
+  &END
+
+
+&PSNIDINP
+     METHOD_NAME = 'BEST'
+
+     FILTLIST_FIT   = 'gri'
+     FILTLIST_PEAKMAG_STORE = 'ri'
+
+     TEMPLATES_SNIa  = 'SDSS/SNgrid/GRID_SDSS_SNIa-S11DM15.FITS'
+     TEMPLATES_NONIa = 'SDSS/SNgrid/GRID_SDSS_SNCC-S11.FITS'
+
+
+     OPT_ZPRIOR  = 1        ! 0=flat, 1=zspec, 2=zphot
+
+     COLOR_MIN   = -1.0     ! minimum
+     COLOR_MAX   =  1.0     ! and maximum color value
+     NCOLOR      =  41      ! and number of bins to use in grid search
+
+     DMU_MIN     = -1.5
+     DMU_MAX     =  1.5
+     NDMU        =  31
+     MCMC_NSTEP  =  500000
+
+     PBAYES_IA_CUT  = 0.5
+     PBAYES_IBC_CUT = 0.5
+     PBAYES_II_CUT  = 0.5
+     
+     FITPROB_IA_CUT  = 0.01
+     FITPROB_IBC_CUT = 0.01
+     FITPROB_II_CUT  = 0.01
+
+  &END

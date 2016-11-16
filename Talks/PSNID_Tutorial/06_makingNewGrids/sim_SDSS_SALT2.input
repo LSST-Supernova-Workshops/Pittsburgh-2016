@@ -1,0 +1,32 @@
+PREFIX_GRIDFILE: GRID_SDSS_SNIa-SALT2_TEST
+GENMODEL:   SALT2.Guy10_LAMOPEN
+
+SIMLIB_FILE: SDSS_3year.SIMLIB     # need simlib to specify survey
+GENVERSION:  GRIDGEN_SDSS_SALT2    # SNDATA version to generate
+
+GENSOURCE:       GRID
+NGRID_LOGZ:        10  # log10(redshift)
+NGRID_SHAPEPAR:    17  # x1
+NGRID_COLORPAR:     2  # color
+NGRID_COLORLAW:     1  # BETA
+NGRID_TREST:       56  # GENRANGE_Trest
+GRID_FORMAT:     FITS  # TEXT or FITS
+
+GENFILTERS:  ugriz
+KCOR_FILE:   SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits
+
+GENRANGE_REDSHIFT:  0.01  0.7
+GENRANGE_TREST:   -20.0  90.0      # obs  epoch relative to peak (days)
+GENRANGE_SALT2x1:  -4.0   3.0      # x1 (stretch) range
+GENRANGE_SALT2c:    -0.4   0.6     # color range
+GENRANGE_SALT2BETA:  3.2   3.2     # beta range
+GENRANGE_SALT2ALPHA: 0.13  0.13
+
+CLEARPROMPT: 0  # 0=>overwrite previous version without prompt
+
+# cosmological params for lightcurve generation and redshift distribution
+OMEGA_MATTER:  0.27
+OMEGA_LAMBDA:  0.73
+W0_LAMBDA:    -1.00
+H0:           70.0   
+

@@ -1,0 +1,419 @@
+####################################### 
+# Simulate GRID with 
+#   script:  /project/rkessler/SN/SNANA/SNANA_CURRENT/util/sim_SNgrid.pl 
+#   sim-job: /project/rkessler/SN/SNANA/SNANA_CURRENT/bin/snlc_sim.exe 
+#                            
+####################################### 
+
+
+ ****************************************************************** 
+   Begin execution of snlc_sim.exe    
+   Full command: snlc_sim.exe sim_SDSS_SALT2.input GRID_FORMAT FITS 
+
+ SNDATA_ROOT = /project/rkessler/SN/SNDATA_ROOT 
+ SNANA_DIR   = /project/rkessler/SN/SNANA/SNANA_CURRENT 
+  
+  ######################################################## 
+     INIT_SNVAR: Init variables.
+  ######################################################## 
+  
+   HOST MACHINE =    ()
+   SNDATA_ROOT = /project/rkessler/SN/SNDATA_ROOT
+   SNANA_DIR = /project/rkessler/SN/SNANA/SNANA_CURRENT    (v10_45e )
+   sizeof(INPUTS) =   0.448 MB 
+   sizeof(GENLC)  =   7.990 MB 
+ --------------------------------------------------------
+  Read user input file: sim_SDSS_SALT2.input 
+
+  PROCESS COMMAND LINE ARG: GRID_FORMAT 
+	 SIMLIB file        : SDSS_3year.SIMLIB   (start LIBID=0)
+	 Generation Version : GRIDGEN_SDSS_SALT2 
+	 Generation source  : GRID 
+	 Generation model   : SALT2.Guy10_LAMOPEN 
+	 Number of LC to Generate: 0 
+	 OMEGA_(MATTER,LAMBDA)= 0.270, 0.730,    W= -1.00   H0= 70.0 
+	 KCOR  file : SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits 
+	 Observer Gen-FILTERS  :  ugriz  
+	 Random number seed: 1 
+	 Gen-Range for RA(deg)  : -360.000 to  360.000 
+	 Gen-Range for DECL(deg): -360.000 to  360.000 
+	 Gen-Range for REDSHIFT :    0.010 to    0.700  (sigma= 0.0000) 
+	 Gen-Range for PEAKMJD  :      0.0 to      0.0  
+	 Gen-Range for Trest    :    -20.0 to     90.0  days 
+	 Gen-Range for SHAPEPAR  :     -4.0 to      3.0  
+	 Gen-Range for AV  : 0.00 to 0.00  (dN/dAv = exp(-AV/0.00) 
+	 Gen-Mean  for RV  : 3.10  
+	 Gen-sigma for RV  : 0.00 , 0.00 (lower , upper ) 
+	 Gen-Range for RV  : 2.10 to 4.10 
+	 AB mag offsets (ugriz) : 
+	 MODEL mag offsets (ugriz) :    0.00   0.00   0.00   0.00   0.00
+
+
+ ****************************************************************** 
+   SIMLIB_open(): Open conditions library for simulation.  
+	 Opened /project/rkessler/SN/SNDATA_ROOT/simlib/SDSS_3year.SIMLIB 
+	 SIMLIB Survey    : SDSS 
+	 SIMLIB Filters   : ugriz 
+	 SIMLIB telescope : SDSS 
+	 SIMLIB created by: rkessler 
+	 SIMLIB MJD-SKIP RANGE:  53705 -  53975 
+	 SIMLIB MJD-SKIP RANGE:  54060 -  54345 
+	 SIMLIB Found FLUXERR_ADD:  for 'ugriz' 
+	 SIMLIB Found flux-error correction map. 
+	 SIMLIB PSF unit:    PIXEL_SIGMA 
+	 SIMLIB SKYSIG unit: ADU_PER_SQPIXEL 
+
+ ****************************************************************** 
+   init_GRIDsource for SURVEY=SDSS  and  GENMODEL=SALT2.Guy10_LAMOPEN : 
+  
+ 10 GRID-BINS for     LOGZ :  -2.00  -1.79  -1.59  -1.38  -1.18  -0.97  -0.77  -0.56  -0.36  -0.15 
+	 ILCOFF(LOGZ,IPAR=1) = 1 
+  2 GRID-BINS for        c :  -0.40   0.60 
+	 ILCOFF(c,IPAR=2) = 10 
+  1 GRID-BINS for     BETA :   3.20 
+	 ILCOFF(BETA,IPAR=3) = 20 
+ 17 GRID-BINS for       x1 :  -4.00  -3.56  -3.12  -2.69  -2.25  -1.81  -1.38  -0.94  -0.50  -0.06   0.38   0.81   1.25   1.69   2.12   2.56   3.00 
+	 ILCOFF(x1,IPAR=4) = 20 
+  5 GRID-BINS for   FILTER :   0.00   1.00   2.00   3.00   4.00 
+	 ILCOFF(FILTER,IPAR=5) = 340 
+ 56 GRID-BINS for    TREST : -20.00 -18.00 -16.00 -14.00 -12.00 -10.00  -8.00  -6.00  -4.00  -2.00   0.00   2.00   4.00   6.00   8.00  10.00  12.00  14.00  16.00  18.00  20.00  22.00  24.00  26.00  28.00  30.00  32.00  34.00  36.00  38.00  40.00  42.00  44.00  46.00  48.00  50.00  52.00  54.00  56.00  58.00  60.00  62.00  64.00  66.00  68.00  70.00  72.00  74.00  76.00  78.00  80.00  82.00  84.00  86.00  88.00  90.00 
+	 ILCOFF(TREST,IPAR=6) = 1700 
+	 Generate 340 light curves, each with ugriz and 56 epochs.
+	 GRID storage (mag+err, excluding header):   0.386 MB.
+  
+  ============================================= 
+  RDKCOR_FITS: Read Calib/Kcor tables.
+    Opened /project/rkessler/SN/SNDATA_ROOT/kcor/SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits
+    with Blocksize=  1   and ISTAT=     0
+  
+      RDKCOR_FITS_HEAD    
+         Read VERSION      =   3  (kcor.exe version)
+         Read NPRIM        =   2  primary refs
+         Read NFILTERS     =  16  filters
+         Read NKCOR        =  22  K-COR tables
+      RDKCOR_FITS_ZPT 
+      RDKCOR_FITS_SNSED 
+      RDKCOR_FITS_KCOR  
+         Added Bessell-BX to rest-frame list.
+      RDKCOR_FITS_MAGS  
+      RDKCOR_FITS_FILTERS 
+      RDKCOR_FITS_PRIMARYSED  
+      FTCLOSE  
+         ---------------------- 
+         !!! RDKCOR_SUMMARY !!! 
+         ---------------------- 
+    Primary spectrum: AB                  
+  
+  FILTER SUMMARY (RDKCOR) : 
+  internal                    LAM  LAM   rest-lam      primary
+  index name                  AVG  RMS   kcor range    mag   ZP
+ ------------------------------------------------------------------
+  01 SDSS-u                  3594  250      0-    0   0.000  0.000
+  02 SDSS-g                  4718  386      0-    0   0.000  0.000
+  03 SDSS-r                  6187  343      0-    0   0.000  0.000
+  04 SDSS-i                  7506  382      0-    0   0.000  0.000
+  05 SDSS-z                  8918  510      0-    0   0.000  0.000
+  
+  11 Bessell-U               3592  220   1000- 3900   9.724 -0.760
+  12 Bessell-B               4384  353   3900- 4850   9.907  0.130
+  13 Bessell-V               5489  357   4850- 5850   9.464  0.012
+  14 Bessell-R               6524  628   5850- 7050   9.166 -0.160
+  15 Bessell-I               8033  462   7050-12000   8.846 -0.398
+  16 Bessell-BX              4405  355   3615- 5595   9.907  0.140
+ ------------------------------------------------------------------
+    NFILTDEF[SURVEY,REST] =    5   6
+  
+   KCOR SUMMARY ( 11 tables)
+        1  Found K_Uu table   (11-> 1 : Bessell-U -> SDSS-u)
+        2  Found K_Ug table   (11-> 2 : Bessell-U -> SDSS-g)
+        3  Found K_Bg table   (12-> 2 : Bessell-B -> SDSS-g)
+        4  Found K_Br table   (12-> 3 : Bessell-B -> SDSS-r)
+        5  Found K_Vr table   (13-> 3 : Bessell-V -> SDSS-r)
+        6  Found K_Vi table   (13-> 4 : Bessell-V -> SDSS-i)
+        7  Found K_Rr table   (14-> 3 : Bessell-R -> SDSS-r)
+        8  Found K_Ri table   (14-> 4 : Bessell-R -> SDSS-i)
+        9  Found K_Rz table   (14-> 5 : Bessell-R -> SDSS-z)
+       10  Found K_Ii table   (15-> 4 : Bessell-I -> SDSS-i)
+       11  Found K_Iz table   (15-> 5 : Bessell-I -> SDSS-z)
+    Rest-frame filters : UBVRI   (ifiltdef=  11 12 13 14 15 16)
+   
+   K-CORR TABLE uses  23.85% of  8000000 available bins (  32.0 MB)
+   AVWARP TABLE uses  38.16% of  1000000 available bins (   4.0 MB)
+   LCMAG  TABLE uses  19.08% of  2000000 available bins (   8.0 MB)
+   MWXT   TABLE uses  15.90% of  2000000 available bins (   8.0 MB)
+   MWXT   TABLE params: RV= 3.10   and OPT_MWCOLORLAW= 94
+  
+       Read  921  Lambda   bins,  2100. - 11300.  binSize= 10.0
+       Read  106  Trest    bins, -20.00 -  85.00  binSize=1.000
+       Read   24  Redshift bins,   0.00 -   0.46  binSize=0.020
+       Read   25  AVwarp   bins,  -6.00 -   6.00  binSize=0.500
+  
+   RDKCOR: Done. 
+  ---------------------------------------------- 
+  
+    Zeropoint offsets (ZPOFF) from : KCOR file
+         Will apply net MAGOBS_SHIFT_ZP(u) = -0.0679
+         Will apply net MAGOBS_SHIFT_ZP(g) =  0.0203
+         Will apply net MAGOBS_SHIFT_ZP(r) =  0.0049
+         Will apply net MAGOBS_SHIFT_ZP(i) =  0.0178
+         Will apply net MAGOBS_SHIFT_ZP(z) =  0.0102
+
+
+ ****************************************************************** 
+   init_genmag_SALT2 : Initialize SALT2.Guy10_LAMOPEN  
+   Read primary ref 'AB' with 921 lambda bins 
+
+   Defined                                 Lambda           AB     AB 
+   Filter                  <LAMBDA>        Range(step)      mag    ZP 
+   ----------------------------------------------------------------------
+   id=01 (        SDSS)   ( 3594.3 + 0)   3000- 7880( 10)   0.000  12.185  
+   id=02 (        SDSS)   ( 4717.6 + 0)   3610- 5630( 10)   0.000  14.341  
+   id=03 (        SDSS)   ( 6186.8 + 0)   5370- 7050( 10)   0.000  14.230  
+   id=04 (        SDSS)   ( 7506.2 + 0)   6590- 8390( 10)   0.000  13.886  
+   id=05 (        SDSS)   ( 8918.3 + 0)   7700-11160( 10)   0.000  11.912  
+   ----------------------------------------------------------------------
+  Read SALT2 model parameters from SALT2_MODELPATH = 
+	  /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN
+
+  SALT2.INFO 
+	 RESTLAMBDA_RANGE:    2250 -   8700 A
+	 Global MAG OFFSET:   0.270 mag  
+	 COLOR OFFSET:   0.000 mag  
+	 COLORLAW PARAMS:  
+	    B,V_WAVELENGTH = 4302.6 , 5428.6 
+	    INTERP LAMBDA RANGE:  2800.0 -  7000.0 
+	    Polynomial params: -0.537  0.895 -0.514  0.089 
+	 MAGERR_FLOOR:   0.005 mag  
+	 MAGERR(OBS)  +=  0.100 mag for   2000  < LAMOBS <   4000 
+	 MAGERR(REST) =  0.100 mag for    100 < LAMREST <    200 
+	 SEDFLUX_INTERP_OPT:  2  (Spline  then Linear with LAMSTEP/2 and DAYSTEP/5) 
+	 ERRMAP_INTERP_OPT:   1  (Linear) 
+	 ERRMAP_KCOR_OPT:     1  (ON) 
+
+  Read  SALT2-0  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_template_0.dat 
+  Store SED-0  LAM(MIN,MAX,STEP)=2000,9200,5  DAY(MIN,MAX,STEP)=-20,50,0.2 
+
+  Read  SALT2-1  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_template_1.dat 
+  Store SED-1  LAM(MIN,MAX,STEP)=2000,9200,5  DAY(MIN,MAX,STEP)=-20,50,0.2 
+
+	 mB = 10.6350 - 2.5*log10(x0)  
+
+ Read SALT2 ERROR MAPS: 
+  Read  SALT2-VAR0  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_lc_relative_variance_0.dat 
+  Read  SALT2-VAR1  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_lc_relative_variance_1.dat 
+  Read  SALT2-COVAR  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_lc_relative_covariance_01.dat 
+  Read  SALT2-ERRSCALE  SED  from : 
+    /project/rkessler/SN/SNDATA_ROOT/models/SALT2/SALT2.Guy10_LAMOPEN/salt2_lc_dispersion_scaling.dat 
+
+  Read color-dispersion vs. lambda from salt2_color_dispersion.dat 
+  Create ColorLaw Table: COLOR(MIN,MAX,STEP) = -2.0,2.0,0.01
+
+                               peak     color  
+            LAMBDA(A)  e^CL    dS0/S0   disp   
+  --------------------------------------------- 
+  LAMINFO:    2000     0.000   0.0000   0.750  
+  LAMINFO:    2500     0.000   0.0550   0.589  
+  LAMINFO:    3000     0.017   0.0680   0.179  
+  LAMINFO:    3500     0.250   0.0225   0.073  
+  LAMINFO:    3560     0.301   0.0193   0.067  
+  LAMINFO:    3900     0.631   0.0216   0.043  
+  LAMINFO:    4302     1.000   0.0067   0.029  
+  LAMINFO:    4720     1.391   0.0167   0.023  
+  LAMINFO:    5428     2.512   0.0114   0.019  
+  LAMINFO:    6185     4.419   0.0170   0.022  
+  LAMINFO:    6500     5.043   0.0291   0.025  
+  LAMINFO:    7500     6.478   0.0587   0.044  
+  LAMINFO:    8030     7.453   0.0829   0.061  
+  LAMINFO:    8500     8.439   0.1672   0.075  
+  LAMINFO:    9210    10.182   0.0000   0.086  
+  LAMINFO:    9940    12.351   0.0000   0.071  
+
+  init_genmag_SALT2 : Done. 
+
+ ****************************************************************** 
+   init_modelSmear: init intrinsic SN smearing with model=NONE  
+	 Smear-mode: complete wavelength dependence. 
+
+ ****************************************************************** 
+    Fill comments for README doc-file  
+
+ ****************************************************************** 
+   clr_VERSION  
+	 LCMERGE Version GRIDGEN_SDSS_SALT2 does not exist. 
+	 SIM Version GRIDGEN_SDSS_SALT2 does not exist. 
+	 PHOTOMETRY Version GRIDGEN_SDSS_SALT2 does not exist. 
+
+  Opened GRIDGEN fits file (istat=0): 
+	 /project/rkessler/SN/SNDATA_ROOT/SIM/GRIDGEN_SDSS_SALT2/GRIDGEN_SDSS_SALT2.GRID 
+	 create GRIDGEN header keys. 
+	 create GRIDGEN info-table for each parameter : 
+	 create GRIDGEN table of values for : LOGZ c BETA x1 FILTER TREST 
+	 create GRIDGEN table of pointers to 340 light curves 
+	 create GRIDGEN table for model MAGS and ERRORS 
+
+ ****************************************************************** 
+    Begin Generating Lightcurves.   
+	 Finished writing      1 of 340 (CID=       1, NEP=280) 
+	 Finished writing     10 of 340 (CID=      10, NEP=280) 
+	 Finished writing     20 of 340 (CID=      20, NEP=280) 
+	 Finished writing     30 of 340 (CID=      30, NEP=280) 
+	 Finished writing     40 of 340 (CID=      40, NEP=280) 
+	 Finished writing     50 of 340 (CID=      50, NEP=280) 
+	 Finished writing     60 of 340 (CID=      60, NEP=280) 
+	 Finished writing     70 of 340 (CID=      70, NEP=280) 
+	 Finished writing     80 of 340 (CID=      80, NEP=280) 
+	 Finished writing     90 of 340 (CID=      90, NEP=280) 
+	 Finished writing    100 of 340 (CID=     100, NEP=280) 
+	 Finished writing    110 of 340 (CID=     110, NEP=280) 
+	 Finished writing    120 of 340 (CID=     120, NEP=280) 
+	 Finished writing    130 of 340 (CID=     130, NEP=280) 
+	 Finished writing    140 of 340 (CID=     140, NEP=280) 
+	 Finished writing    150 of 340 (CID=     150, NEP=280) 
+	 Finished writing    160 of 340 (CID=     160, NEP=280) 
+	 Finished writing    170 of 340 (CID=     170, NEP=280) 
+	 Finished writing    180 of 340 (CID=     180, NEP=280) 
+	 Finished writing    190 of 340 (CID=     190, NEP=280) 
+	 Finished writing    200 of 340 (CID=     200, NEP=280) 
+	 Finished writing    210 of 340 (CID=     210, NEP=280) 
+	 Finished writing    220 of 340 (CID=     220, NEP=280) 
+	 Finished writing    230 of 340 (CID=     230, NEP=280) 
+	 Finished writing    240 of 340 (CID=     240, NEP=280) 
+	 Finished writing    250 of 340 (CID=     250, NEP=280) 
+	 Finished writing    260 of 340 (CID=     260, NEP=280) 
+	 Finished writing    270 of 340 (CID=     270, NEP=280) 
+	 Finished writing    280 of 340 (CID=     280, NEP=280) 
+	 Finished writing    290 of 340 (CID=     290, NEP=280) 
+	 Finished writing    300 of 340 (CID=     300, NEP=280) 
+	 Finished writing    310 of 340 (CID=     310, NEP=280) 
+	 Finished writing    320 of 340 (CID=     320, NEP=280) 
+	 Finished writing    330 of 340 (CID=     330, NEP=280) 
+	 Finished writing    340 of 340 (CID=     340, NEP=280) 
+
+ ****************************************************************** 
+    Done generating 340 SN lightcurves from GRID source.  
+	 (340 lightcurves requested => 340 were written) 
+
+ ****************************************************************** 
+    Fill comments for README doc-file  
+
+ ****************************************************************** 
+   DUMP README CONTENTS TO SCREEN
+  
+ USER COMMENT: BLANK 
+
+ BRIEF_DESCRIPTION: simulate GRID SNe with GENMODEL = SALT2.Guy10_LAMOPEN 
+
+  HOST MACHINE: (null) 
+  USERNAME:  cdandrea 
+  SNDATA_ROOT:  /project/rkessler/SN/SNDATA_ROOT 
+  SNANA_DIR:    /project/rkessler/SN/SNANA/SNANA_CURRENT 
+  Current Dir:  /scratch/midway/cdandrea/PSNID_Tutorial/06_makingNewGrids/SNgrid 
+
+ FULL_DESCRIPTION: 
+	 SIMLIB filename  : SDSS_3year.SIMLIB (start at LIBID=0) 
+	 SIMLIB SURVEY    : SDSS  (TELESCOPE=SDSS, MINOBS=1) 
+	 SIMLIB UNITS     : PIXEL_SIGMA for PSF,  ADU_PER_SQPIXEL for SKYSIG 
+	 FUDGEOPT_FLUXERR : 0 
+	 NEWMJD_DIF       : 10.08  minutes (defines trigger epoch)
+	 Generation VERSION: GRIDGEN_SDSS_SALT2 
+	 Generation source : GRID 
+	 Generation FILTERS: ugriz 
+	 KCOR lookup tables: SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits 
+	 Flux-smearing is ON 
+	 Zeropt-smearing is ON 
+	 Host-galaxy shot-noise  is OFF 
+	 Host-galaxy image-noise  is OFF 
+	 MilkyWay extinction  is ON  
+	    Color law: CCM89+ODonell94  (OPT_MWCOLORLAW=94) 
+	    E(B-V): FILE value (SIMLIB or data header)   (OPT_MWEBV=1)
+	    sigma(MWEBV) = 0.16*MWEBV + 0.00  
+	    shift(MWEBV) = 0.000 mag 
+
+  GENERATION RANGES: 
+	 ==> Override gen-values with SIMLIB header values.
+	 Generate Redshift :  0.010 to  0.700  using  SIMLIB values. 
+	 REDSHIFT_FINAL is ZCMB_GEN smeared by :  0.00000 
+	 Peculiar Velocity Gaussian sigma: 0.0 km/sec
+	 ugriz   AB   offsets : -0.068  0.020  0.005  0.018  0.010 
+	 ugriz  MODEL offsets :  0.000  0.000  0.000  0.000  0.000 
+	 ugriz  exposure times: 1.0000 1.0000 1.0000 1.0000 1.0000 
+	 RA       : -360.00 to 360.00  deg
+	 PEAKMJD  :      0.0 to      0.0   
+	 sigma-smear(SEARCH_PEAKMJD)  :  0.00 days 
+	 Trest    :   -20.00 to    90.00  days 
+	 RISETIME-SHIFT(days) SIGMA(lo,hi) : 0.0 , 0.0  (Mean= 0.0) 
+	 FALLTIME-SHIFT(days) SIGMA(lo,hi) : 0.0 , 0.0  (Mean= 0.0) 
+	 Shape-par(x1): Peak=0.00  SIG-+= 5.000,5.000  SKEW=0.00,0.00  BND=-4.00,3.00
+	 SALT2c: Peak=0.00  SIG-+= 1.000,1.000  SKEW=0.00,0.00  BND=-0.40,0.60
+	 Alpha : Peak=0.11  SIG-+= 0.000,0.000  SKEW=0.00,0.00  BND=0.13,0.13
+	 Beta  : Peak=3.20  SIG-+= 0.000,0.000  SKEW=0.00,0.00  BND=3.20,3.20
+
+  Z-dependent SN-parameter shifts:  None. 
+
+  Intrinsic MAG-smearing models (sigma clip -3.0 to  3.0) : 
+   Model 1: Coherent MAG-smearing (GENMAG_SMEAR) :  0.000  
+   Model 2: passband MAG-smearing is OFF 
+   Model 3:  model-smear is OFF  
+   Model 4: intrinsic scatter matrix is OFF 
+   Model 5: GENMAG_SMEAR_USRFUN is  OFF 
+
+  AVWARP_OVERFLOWS:  NONE. 
+
+  Cosmology Parameters: 
+	 H0 =  70.00 km/s per MPc 
+	 Omega_{M,L} =  0.27,  0.73   w = -1.00  
+
+ --------------------------------------------------- 
+  Software-Pipeline Search Efficiency (MINOBS=2) from 
+
+  Spectroscopic Efficiency : 
+
+  Unconfirmed zHOST Efficiency map from 
+	  
+
+  APPLY_SEARCHEFF_OPT:  0 => Do NOT Apply trigger efficiency  
+  SNTYPE(Ia) = 1(SPEC)  and 101(PHOT) 
+ --------------------------------------------------- 
+
+  HOSTLIB Summary: None. 
+
+  Fudges on SIMLIB Seeing Conditions: NONE. 
+
+ ============ END OF SIMULATION SUMMARY ============== 
+
+  Random Number Sync: 
+	 RANDOM SEED: 1   (RANLIST_START_GENSMEAR: 1)
+
+  Generation Statistics (total CPU=0.2 minutes): 
+	 Generated   340 simulated light curves (31/sec) 
+	 Wrote       340 simulated light curves to SNDATA files (31/sec). 
+  Spectroscopic-type: 340 -> 340 (before -> after cuts)
+  Photometric-type:   0 -> 0 (before -> after cuts)
+  Rejection Statistics: 
+	     0 rejected by GENRANGEs 
+	     0 rejected by GENRANGE_PEAKMAG 
+	     0 rejected by SEARCH-TRIGGER 
+	     0 rejected by CUTWIN-SELECTION 
+  SEARCH+CUTS Efficiency:  1.0000 +-  0.0029 
+
+  Number of SNe per season AFTER CUTS :      0 +-     0 
+
+	 ===== END OF README FILE ====== 
+
+  AUXILIARY FILES: 
+  /project/rkessler/SN/SNDATA_ROOT/SIM/GRIDGEN_SDSS_SALT2/GRIDGEN_SDSS_SALT2.LIST 
+  /project/rkessler/SN/SNDATA_ROOT/SIM/GRIDGEN_SDSS_SALT2/GRIDGEN_SDSS_SALT2.README 
+  /project/rkessler/SN/SNDATA_ROOT/SIM/GRIDGEN_SDSS_SALT2/GRIDGEN_SDSS_SALT2.GRID
+
+ ****************************************************************** 
+   end_GRIDfile  
+	 Total number of generated points: 96560 
+	 Actual PTR_GRIDGEN_LC[last ilc=     340] = 96277 
+	 Expected PTR_GRIDGEN_LC[last ilc]        = 96277 
+
+ DONE with snlc_sim.
