@@ -11,7 +11,6 @@ We created this new organization (LSST-Supernova-Workshops) to provide
 ## Installs for Cadence
 - The lsst sims stack: The most important one is the LSST sims stack. Installation instructions [here](https://confluence.lsstcorp.org/display/SIM/Catalogs+and+MAF) (probably easier to use conda, ~ 20 mins)
 - sqlite3 
-- sqlalchemy
 - pandas
 - tables
 - OpSimSummary : https://github.com/rbiswas4/OpSimSummary
