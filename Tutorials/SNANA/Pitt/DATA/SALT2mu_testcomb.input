@@ -1,0 +1,87 @@
+# MUOPT000:  ABCD fit with NBZ=11
+# MUOPT001:  idem with NBZ=22
+# MUOPT002:  legacy chi2 fit with no biasCor and no log(sigma),NBZ=11
+#
+
+BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb_kicp.TEMPLATE 60
+
+
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_SNLS
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_SDSS
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CSP
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA3
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA4p2
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA2
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA3s
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA4p1
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CFA1
+INPDIR+:  /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_PS1_Scolnic2
+
+STRINGMATCH_IGNORE: JLA2014_SDSS JLA2014_SNLS NewDan101f PS1s_CSPDR2_V PS1s_CFA3_KEPLERCAM PS1s_CFA4_p2 PS1s_CFA2_JRK07 PS1s_CFA3_4SHOOTER2 PS1s_CFA4_p1 PS1s_CFA1_JRK07
+
+
+
+
+
+WFITMUDIF_OPT:   -dompri 10.0 -cmb -omsteps 201 -marg -Rcmb 1.7407 -sigma_Rcmb 0.0094 -hsteps 241
+
+
+# ------------------
+surveygroup_biascor='CFA1+CFA2+CFA3+CFA3S+CFA3K+CFA4p1+CFA4p2+CSP,PS1MD,SDSS,SNLS'
+#surveylist_nobiascor='HST,SNAP,CANDELS,CLASH'
+file=/project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_SNLS/JLA2014_SNLS_DS16/FITOPT000.FITRES
+lensing_zpar=0.055
+powzbin=2.2
+simfile_biascor=../SIMS/FITOPT_MASTER_G10.FITRES
+opt_biascor=112
+prefix=SALT2mu_all
+outdir_prefix=S16M
+vpecerror=150
+blindflag=0
+varname_pIa=NN_PROB_IA
+redchi2_tol=.01
+fitflag_sigmb=2
+iflag_duplicate=2
+sig1=0.12
+zmin=0.01
+zmax=1.0
+bins=20
+x1min=-3.0
+x1max=+3.0
+cmax=+0.3
+cmin=-0.3
+CUTWIN  x1ERR     0. 1.0
+CUTWIN  PKMJDERR  0. 2.0
+CUTWIN FITPROB 0.00 1.0
+CUTWIN HOST_LOGMASS -.5 17
+errmask_write=0
+p1=0.14
+p2=3.1
+p3=0.0
+p4=0.0
+p5=0.0
+p6=0.0
+p7=10.0
+p8=0.0
+p9=0.70
+p10=0.0
+p11=-1.0
+p12=0.0
+p13=0.0
+u1=1
+u2=1
+u3=0
+u4=0
+u5=1
+u6=0
+u7=0
+u8=0
+u9=0
+u10=0
+u11=0
+u12=0
+u13=0
+h0=70.0
+mag0=-30.00
+uave=1
+hgtype=-1
