@@ -1,0 +1,60 @@
+#for midway
+OUTDIR: /project/rkessler/dscolnic/mb_bias/SDSS/sim_muBias_ABCD_DSr
+BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb_kicp.TEMPLATE 45
+
+GZIP_FLAG:  0
+
+# fit with SALT2mu to get alpah,beta,mu
+
+VERSION:  DSr_ABCD_smearG10_SDSS-*
+VERSION:  DSr_ABCD_smearC11_SDSS-*
+
+
+
+  &SNLCINP
+     VERSION_PHOTOMETRY = 'RKJLA_SDSS3year_G10smear'
+     ROOTFILE_OUT    = 'LCFIT_SALT2_SDSS.root'
+     KCOR_FILE    = 'SDSS/SDSS_Doi2010/kcor_SDSS_Bessell90_BD17.fits'
+ 
+     USE_MINOS    = F
+     PHOTFLAG_MSKREJ  = 1024
+     ABORT_ON_NOEPOCHS = F
+
+     NFIT_ITERATION = 2
+     INTERP_OPT     = 1
+     H0_REF         = 70.0
+ 
+     CUTWIN_CID   =  0, 9111000
+     SNCID_LIST   =  0
+     SNTYPE_LIST  =  0, 120, 106, 220
+
+     cutwin_redshift  =  0.0, 0.45
+     cutwin_peakmjd   = 53615.0,  55000.0
+     cutwin_Trest     = -20.0, 80.0
+ 
+     cutwin_Nepoch       = 5
+     cutwin_Nband_thresh = 1
+ 
+  &END
+ 
+     cutwin_Trestmin  = -99.0, -2.0
+     cutwin_Trestmax  =  10.0, 9999.
+ 
+  &FITINP
+     OPT_XTMW_ERR   = 1
+     OPT_COVAR      = 1
+     FITMODEL_NAME  = 'SALT2.JLA-B14'
+ 
+
+     PRIOR_LUMIPAR_RANGE = -5.0, +5.0 
+     PRIOR_MJDSIG = 10.
+     USE_MODEL_MAGERR = T
+ 
+     DELCHI2_REJECT  =  100000.0
+     TREST_REJECT    = -15.0, 45.0
+     SIGNOISE_REJECT = -8.0
+ 
+     FILTLIST_FIT = 'ugriz'
+  
+  &END
+  
