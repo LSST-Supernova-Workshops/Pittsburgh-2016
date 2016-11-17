@@ -25,3 +25,11 @@
 10. Emille Ishida, Domain adaptation and active learning in SN photometric classification
 
 11. Robert Schumann, SN classification with machine learning
+
+# Optimal image subtraction and photometric calibration
+
+12. David Reiss, Image differencing in the LSST pipelines
+
+13. Michael Wood-Vasey, TBD: Twinkles Basic Differencing
+
+14. James Lasker, Absolute calibration of Dark Energy Survey
