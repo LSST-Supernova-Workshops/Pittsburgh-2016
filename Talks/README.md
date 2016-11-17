@@ -33,3 +33,7 @@
 13. Michael Wood-Vasey, TBD: Twinkles Basic Differencing
 
 14. James Lasker, Absolute calibration of Dark Energy Survey
+
+# SN light curve fitting/constructing Hubble diagram
+
+15. Kyle Barbary, SNcosmo
