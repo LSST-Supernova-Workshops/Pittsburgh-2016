@@ -37,3 +37,37 @@
 # SN light curve fitting/constructing Hubble diagram
 
 15. Kyle Barbary, SNcosmo
+
+16. Ondrej Pejcha, A global model of the light curves and expansion velocities of SNe IIP
+
+17. Tomás Müller, Physical parameters of SNe II
+
+18. Lluís Galbany, Spectrophotometric template of SNe II
+
+19. Matthieu Roman, The dependence of SNe Ia luminosities on their local environment
+
+20. Daniel Scolnic, SNANA
+
+# Simulations of cosmological parameter determination
+
+21. Renée Hlozek, Cosmological Analysis with SNe
+
+22. David Jones, Contaminated cosmology: Measuring w with photometrically classified SNe from Pan-STARRS
+
+23. Tina Peters, SN cosmology with BEAMS
+
+# Strategies for spectroscopic follow­up: host galaxies and live spectroscopy
+
+24. Mark Sullivan, TBD
+
+25. Chris D'Andrea, MOS follow-up of SNe Ia host galaxies: Lessons from DES
+
+26. Kara Ponder, IFU follow-up of SweetSpot SN Ia host galaxies
+
+# Cross­-correlation/validation with other probes
+
+27. Bob Nichol, SN lensing
+
+                      
+                      
+                      
