@@ -58,16 +58,9 @@
 
 # Strategies for spectroscopic follow­up: host galaxies and live spectroscopy
 
-24. Mark Sullivan, TBD
+24. Mark Sullivan, Spectroscopic follow-up
 
 25. Chris D'Andrea, MOS follow-up of SNe Ia host galaxies: Lessons from DES
 
 26. Kara Ponder, IFU follow-up of SweetSpot SN Ia host galaxies
-
-# Cross­-correlation/validation with other probes
-
-27. Bob Nichol, SN lensing
-
-                      
-                      
                       
