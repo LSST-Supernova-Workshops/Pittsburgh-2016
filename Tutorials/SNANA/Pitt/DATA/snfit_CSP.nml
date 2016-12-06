@@ -1,1 +1,73 @@
-/project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/snfit_CSP.nml
+OUTDIR: /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_CSP
+
+BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb_kicp.TEMPLATE 30
+
+
+APPEND_FITRES: FITRES RA DECL TGAPMAX 
+
+
+
+
+
+VERSION: PS1s_CSPDR2_V_DS16
+
+&SNLCINP
+   VERSION_PHOTOMETRY = 'PS1s_CSPDR2_DS15'
+   ROOTFILE_OUT          = 'snfit_CSP2.root'
+   KCOR_FILE         = 'PS1/PS1_DS15/kcor_CSPall.fits' 
+
+
+   SNTABLE_LIST = 'FITRES(text:key)'
+   TEXTFILE_PREFIX  = 'CSP'
+   
+  NFIT_ITERATION = 3
+     INTERP_OPT     = 1
+     USE_MWCOR = F
+    
+     H0_REF   = 70.0
+     OLAM_REF =  0.70
+     OMAT_REF =  0.30
+     W0_REF   = -1.00
+ 
+     SNCID_LIST  =  0
+     SNCCID_LIST =  ' '
+     SNCCID_IGNORE = ''
+     CUTWIN_CID  =  0,20000000
+     LDMP_SNFAIL =  T
+
+     cutwin_Nepoch    =  2
+     cutwin_redshift  =  0.001,   1.1
+
+     ABORT_ON_NOEPOCHS = F
+
+     cutwin_Nband_thresh = 1
+
+  RV_MWCOLORLAW = 3.1
+     OPT_MWCOLORLAW = 99
+     OPT_MWEBV = 1
+     MWEBV_SCALE = 0.86
+     MWEBV_SHIFT = 0.0
+     MAGOBS_SHIFT_PRIMARY= '  B -0.0082722800 g 0.0088273000 o 0.0017663098 m 0.0017663098  n 0.0017663098   r 0.0011820498 i -0.016103720  '
+     VPEC_FILE= 'vpec.list'
+  &END
+ 
+ 
+  &FITINP
+
+     FITMODEL_NAME  = 'SALT2.JLA-B14' 
+
+     PRIOR_MJDSIG        = 5.
+     PRIOR_LUMIPAR_RANGE = -5.0, 5.0
+     PRIOR_LUMIPAR_SIGMA = 0.1
+
+    OPT_COVAR = 1
+    OPT_XTMW_ERR = 1
+FUDGEALL_ITER1_MAXFRAC = 0.02
+     TREST_REJECT  = -15.0, 45.0
+ 
+     FILTLIST_FIT = 'Bomngri'
+     FILTLIST_DMPFUN = ''
+     FITWIN_PROB  = 0.001, 1.01
+     
+  &END
+  

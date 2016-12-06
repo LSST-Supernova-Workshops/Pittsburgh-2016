@@ -1,6 +1,6 @@
-OUTDIR: /project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/DS16_PS1_Scolnic2_single
+OUTDIR: /project/rkessler/dscolnic/Tutor/DATA/DS16_PS1_Scolnic2
 
-BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb_kicp.TEMPLATE 20
+BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb_kicp.TEMPLATE 60
 
 VERSION: NewDan101f_DS16
 
@@ -12,11 +12,10 @@ APPEND_FITRES: FITRES RA DECL TGAPMAX
 VERSION_PHOTOMETRY = 'NewDan101f_DS16'
     ROOTFILE_OUT = 'ps1_final.root'
      KCOR_FILE         = 'PS1/PS1_DS15/kcor_PS1.fits'
-
-     SNTABLE_LIST = 'FITRES LCPLOT SNANA'
-     
+      SNCID_LIST_FILE    = 'PS1_BAD.LIST'
+     SNTABLE_LIST = 'FITRES(text:key) LCPLOT(text:col) '
      TEXTFILE_PREFIX  = 'PS1_DS15'
-
+      MXLC_PLOT = 10000
   
      NFIT_ITERATION = 2
      INTERP_OPT     = 1
@@ -28,7 +27,7 @@ VERSION_PHOTOMETRY = 'NewDan101f_DS16'
      W0_REF   = -1.00
  
      SNTEL_LIST  = 'PS1'
-     CUTWIN_CID  = 0,50000000
+     CUTWIN_CID  = 0,0
      LDMP_SNFAIL =  F
      SNCCID_IGNORE =  '470047'
      SNCID_IGNORE = 470047     
@@ -69,7 +68,7 @@ FUDGEALL_ITER1_MAXFRAC = 0.02
    
      FILTLIST_FIT = 'griz'
      FILTLIST_DMPFUN = ''
-     FITWIN_PROB  = 0.0, 1.01
+     FITWIN_PROB  = 0.000, 1.01
      
   &END
   

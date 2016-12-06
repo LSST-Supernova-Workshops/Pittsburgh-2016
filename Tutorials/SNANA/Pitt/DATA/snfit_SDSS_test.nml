@@ -1,1 +1,66 @@
-/project/rkessler/SN/SNDATA_ROOT/INTERNAL/PS1/S16Analysis/DATA/snfit_SDSS_test.nml
+OUTDIR: /project/rkessler/dscolnic/Tutor/DATA/DS16_SDSS
+BATCH_INFO:  sbatch  /project/rkessler/dscolnic/SBATCH_sandyb.TEMPLATE 60
+
+VERSION: JLA2014_SDSS_DS16
+
+
+
+  &SNLCINP
+     VERSION_PHOTOMETRY = 'DS_Test'
+
+     ROOTFILE_OUT = 'sdss_1.root'
+     KCOR_FILE   = 'PS1/PS1_DS15/kcor_SDSS.fits'
+    
+     PHOTFLAG_MSKREJ  = 1024
+
+ SNTABLE_LIST = 'FITRES(text:key)'
+   TEXTFILE_PREFIX  = 'SDSS'
+   MXLC_PLOT = 1000 
+     USE_MINOS      = F
+     NFIT_ITERATION = 3
+     INTERP_OPT     = 1
+     H0_REF         = 70.0
+    
+     SNTYPE_LIST  =  0
+
+     cutwin_redshift  =  0.0, 0.46
+     cutwin_peakmjd   = 53600.0,  55000.0
+     cutwin_Trest     = -20.0, 60.0
+ 
+     cutwin_Nepoch       = 5
+     cutwin_Nband_thresh = 1
+     ABORT_ON_NOEPOCHS = F 
+     
+ RV_MWCOLORLAW = 3.1
+     OPT_MWCOLORLAW = 99
+     OPT_MWEBV = 1
+     MWEBV_SCALE = 0.860
+     MWEBV_SHIFT = 0.0
+     MAGOBS_SHIFT_PRIMARY= ' g -0.0029473880 r 0.0044133478 i 0.00072395845 z -0.0083579659'
+
+  &END
+ 
+ 
+  &FITINP
+     FITMODEL_NAME       = 'SALT2.JLA-B14'
+     RESTLAMBDA_FITRANGE = 3000.0, 7000.0
+
+     OPT_XTMW_ERR   = 1
+     OPT_COVAR      = 1
+
+
+     PRIOR_SHAPE_RANGE = -5.0, +5.0 
+     PRIOR_MJDSIG = 10.
+     USE_MODEL_MAGERR = T
+ 
+     DELCHI2_REJECT  =  100000.0
+     TREST_REJECT    = -15.0, 45.0
+     SIGNOISE_REJECT = -8.0
+ 
+     FILTLIST_FIT = 'ugriz'
+ 
+     LFIXPAR_ALL    = F
+     FITWIN_PROB  = 0.01, 1.01
+     
+  &END
+  
